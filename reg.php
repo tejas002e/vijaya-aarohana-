@@ -16,6 +16,7 @@ if ($conn->connect_error) {
 // Define variables and initialize with empty values
 $fullname = $email = $phone = $uucmsNo = "";
 $fullname_err = $email_err = $phone_err = $uucmsNo_err = "";
+$register_success = false; // To track registration success
 
 // Processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -69,9 +70,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Attempt to execute the prepared statement
             if ($stmt->execute()) {
-                // Redirect to success page
-                header("location: success.html");
-                exit();
+                // Set success flag
+                $register_success = true;
             } else {
                 echo "Something went wrong. Please try again later.";
             }
@@ -144,7 +144,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <div class="container">
-        <h1>Register</h1>
+        <h2>Registration form</h2>
+        
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <label for="fullname">Name:</label>
             <input type="text" id="fullname" name="fullname" value="<?php echo htmlspecialchars($fullname); ?>" required>
@@ -163,7 +164,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <span class="error"><?php echo $uucmsNo_err; ?></span>
             
             <input type="submit" value="Submit">
+            
+            <a href="person.html"><span>Back</span></a>
+            
+            
         </form>
     </div>
+
+    <?php if ($register_success): ?>
+        <script type="text/javascript">
+            alert("Register Successful");
+        </script>
+    <?php endif; ?>
 </body>
 </html>
