@@ -1,68 +1,102 @@
-<!DOCTYPE html>
-<html lang="en">
+        <!DOCTYPE html>
+        <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+            <link rel="stylesheet" href="style.css">
 
 
-    <title>Portfolio</title>
+            <title>Portfolio</title>
 
-       
-</head>
+            
+        </head>
 
-<body>
-    <header class="container">
-        <div class="page-header">
-            <div class="logo">
-                <img src="C:\Users\yadav\OneDrive\Desktop\example1\vijayalogo.png" alt="" srcset="" height="40" width="40">
+        <body>
+            <header class="container">
+                <div class="page-header">
+                    <div class="logo">
+                        <img src="C:\Users\yadav\OneDrive\Desktop\example1\vijayalogo.png" alt="" srcset="" height="40" width="40">
 
-            </div>
-            <input type="checkbox" id="click">
+                    </div>
+                    <input type="checkbox" id="click">
 
-            <label for="click" class="mainicon">
-                <div class="menu">
-                    <i class='bx bx-menu'></i>
+                    <label for="click" class="mainicon">
+                        <div class="menu">
+                            <i class='bx bx-menu'></i>
+                        </div>
+                    </label>
+                    <ul>
+                        <li><a href="person.html" class="active" style="--navAni:1">Home</a></li>
+                        <li><a href="food.html" style="--navAni:3">Food</a></li>
+                        <li><a href="stalls.html" style="--navAni:4">Stalls</a></li>
+                        <li><a href="contact.html" style="--navAni:5">Contact</a></li>
+                    </ul>
+                    <label class="mode">
+                        <input type="checkbox" id="darkModeToggle">
+                        <i class='bx bxs-moon'></i>
+                    </label>
                 </div>
-            </label>
-            <ul>
-                <li><a href="person.html" class="active" style="--navAni:1">Home</a></li>
-                <li><a href="food.html" style="--navAni:3">Food</a></li>
-                <li><a href="stalls.html" style="--navAni:4">Stalls</a></li>
-                <li><a href="contact.html" style="--navAni:5">Contact</a></li>
-            </ul>
-            <label class="mode">
-                <input type="checkbox" id="darkModeToggle">
-                <i class='bx bxs-moon'></i>
-            </label>
-        </div>
-    </header>
+            </header>
 
 
-    <section class="container">
-        <div class="main">
-            <div class="detail">
-                <h3>VIJAYA A</h3>
-                <h1><span style="color:#f9532d;">FOODS</span></h1>
-                <p>I'm a professional Web Developer. Our Main Goal to help & Satisficed the Local & Global Clients by
-                    web development solutions
-                </p>
-                <button onclick="location.href='reg.php'">Register</button>
-</body>
+            <section class="container">
+                <div class="main">
+                    <div class="detail">
+                        <h3>VIJAYA A</h3>
+                        <h1><span style="color:#f9532d;">FOODS</span></h1>
+                        <p>Register here for your food coupons
+                        </p>
+                        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Register Button</title>
+            <style>
+                .register-button {
+                    background-color: #af774c; 
+                    border: none; 
+                    color: white; 
+                    padding: 15px 32px; 
+                    text-align: center; 
+                    text-decoration: none; 
+                    display: inline-block; 
+                    font-size: 16px; 
+                    margin: 4px 2px; 
+                    cursor: pointer; 
+                    border-radius: 12px; 
+                    transition-duration: 0.4s; 
+                }
+
+                .register-button:hover {
+                    background-color: white; 
+                    color: black; 
+                    border: 2px solid #aaaf4c; 
+                }
+            </style>
+        </head>
+        <body>
+
+        <button class="register-button" onclick="location.href='reg.php'">Register</button>
+
+        </body>
+        </html>
+
+        </body>
+                        </div>
+                    </div>
+                    <div class="img-sec">
+                        <div class="images">
+                            <img src="https://images.indianexpress.com/2023/12/food.jpg"
+                                alt="" class="img-w">
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="img-sec">
-                <div class="images">
-                    <img src="https://cdna.artstation.com/p/assets/images/images/013/047/862/large/kallesh-thippeswamy-narasimha-portraight01.jpg?1537819455"
-                        alt="" class="img-w">
-                </div>
-            </div>
-        </div>
-    </section>
-    <script src="script.js"></script>
-</body>
+            </section>
+            <script src="script.js"></script>
+        </body>
 
-</html>
+        </html>
